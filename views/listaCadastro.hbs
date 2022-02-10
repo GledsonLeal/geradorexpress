@@ -1,0 +1,16 @@
+<h1>Lista de Alunos: </h1>
+
+{{#each alunos}}
+    <p>Nome Completo: {{dataValues.nome}}</p>
+    <p>E-mail: {{dataValues.email}} </p>
+    <p>Endereço: {{dataValues.endereco}} </p>
+    <p>Cidade: {{dataValues.cidade}} </p>
+    <p>Estado: {{dataValues.estado}} </p>
+    <p>CEP: {{dataValues.cep}} </p>
+
+     <a href= "/deletar/{{dataValues.id}}"><button class="btn btn-danger">Deletar</button></a>
+   
+    <hr>
+{{else}}
+    <h5>Nenhum cadastro</h5>
+{{/each}}

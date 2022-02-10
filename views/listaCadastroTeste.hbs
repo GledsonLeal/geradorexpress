@@ -1,0 +1,39 @@
+<h1>Lista de Alunos: </h1>
+
+{{#each alunos}}  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="nome">Nome: </label>
+      <p class="alert alert-secondary" >{{dataValues.nome}}</p>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <p class="alert alert-secondary" >{{dataValues.email}} </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="endereco">Endereço</label>
+    <p class="alert alert-secondary" >{{dataValues.endereco}} </p>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="cidade">Cidade</label>
+      <p class="alert alert-secondary" >{{dataValues.cidade}} </p>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="estado">Estado</label>
+      <p class="alert alert-secondary" >{{dataValues.estado}} </p>
+      </div>
+    <div class="form-group col-md-2">
+      <label for="cep">CEP</label>
+      <p class="alert alert-secondary" >{{dataValues.cep}} </p>
+    </div>
+  </div>
+  <div class="form-group">
+  <a href= "/deletar/{{dataValues.id}}"><button class="btn btn-danger">Deletar</button></a>
+  <a href= "/editar/{{dataValues.id}}"><button class="btn btn-primary">Editar</button></a>   
+  </div>
+  <hr>
+{{else}}
+    <h5>Nenhum cadastro</h5>
+{{/each}}
